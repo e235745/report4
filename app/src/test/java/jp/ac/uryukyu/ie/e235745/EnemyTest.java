@@ -22,3 +22,5 @@ class EnemyTest {
         assertEquals(defaultHeroHp, demoHero.getHitPoint());
     }
 }
+
+

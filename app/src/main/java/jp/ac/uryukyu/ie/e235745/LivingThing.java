@@ -46,3 +46,5 @@ public class LivingThing {
     public int getHitPoint(){return this.hitPoint;}
     public int getAttack(){return this.attack;}
 }
+
+
