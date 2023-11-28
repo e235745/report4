@@ -7,10 +7,10 @@ public class LivingThing {
     private boolean dead;   
 
     public LivingThing(String _name, int _maximumHP, int _attack){
-        this.name = _name;
-        this.hitPoint = _maximumHP;
-        this.attack = _attack;
-        this.dead = false;
+        this.setName(_name);
+        this.setHitPoint(_maximumHP);
+        this.setAttack(_attack);
+        this.setDead(dead);
         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", _name, _maximumHP, _attack);
     }
 
@@ -33,7 +33,7 @@ public class LivingThing {
     }
     public void wounded(int damage){
         hitPoint -= damage;
-        if( hitPoint < 0 ) {
+        if( hitPoint <= 0 ) {
             dead = true;
             System.out.printf("%sは倒れた。\n", name);
         }
@@ -45,6 +45,7 @@ public class LivingThing {
     
     public int getHitPoint(){return this.hitPoint;}
     public int getAttack(){return this.attack;}
+    
 }
 
 
